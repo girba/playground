@@ -1,0 +1,425 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T18:25:05.425047+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T18:41:16.198444+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "u9ZBvybwDQC9PbPfD/nzEw=="
+				},
+				"code" : "string := 'avoir / être / adorer / acheter / admirer / aimer / aller / attendre/ battre / boire / chanter / commencer / connaître / construire / décider /descendre / détester / devoir / dire / donner / dormir / écrire/ entendre /enfermer /enregistrer / entrer / espérer / explorer / faire / frapper / gagner /goûter / habiter / hacher / inviter / jouer / laver / lire / manger / mélanger /mettre /monter / montrer / nettoyer / opérer / parler / passer / (ap)prendre /comprendre / surprendre / partir / penser / préférer / publier / pouvoir /raconter / regarder / rencontrer / rentrer / réparer / répondre / réserver / retourner / rêver / savoir / sentir / servir / sortir / sourire / tomber / toucher / traverser / trier / trouver / vendre / venir / vivre / voir / vouloir s’amuser / s’appeler / s’énerver / s’habiller / se coucher / se dépêcher / se doucher / se laver / se lever / se préparer / se présenter / se réveiller'.\rverbs := (string piecesCutWhere: [:a :b | b = $/]) collect:[ :s | (s trim removePrefix: '/') trim]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T18:26:48.420098+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T18:58:31.545093+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "b2hlxSbwDQCBY1nSD/nzEw=="
+							},
+							"code" : "chat := GtLlmChat new provider: (GtOpenAIResponseProvider withApiKeyFromFile model: 'o3-mini').\rchat sendMessage: 'Please produce the conjugation at present tense in French for the following verbs: ```text', String lf, (String lf join: verbs), String lf, '```\rFor each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun.'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T18:58:34.707304+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T18:58:36.881336+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3AYFNyfwDQCl5SleDBj69A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Plain chat:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T18:58:41.464561+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T18:58:42.463132+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wCBsNyfwDQCmJNjsDBj69A=="
+							},
+							"code" : "tutor := GtLlmTutor new\r\t\tdescription: 'You are an assistant that is used to interactively work on blog posts.'.\rtutor\r\taddFormat: (GtLlmTutorFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'List';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'List';\r\t\tcontent: verbs;\r\t\tserializer: [:list | String lf join: list ]"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T18:56:07.787805+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T18:56:10.394858+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GTtDLifwDQClHOEkDBj69A=="
+							},
+							"code" : "chat := tutor createChat.\rchat onInstance: serializableText"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T18:58:23.941113+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T19:00:58.154674+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "LMRgNifwDQClyq+sDBj69A=="
+							},
+							"code" : "chat sendChatRequest: 'Please produce the conjugation at present tense in French for the verbs. For each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun. Return the result in the `List` property.'."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T19:39:33.699027+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T19:39:51.31729+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "LUiWySfwDQC1lYGGDBj69A=="
+							},
+							"code" : "tutor := FrenchVerbsTutor new.\rchat := tutor createChat.\rchat onInstance: serializableText"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T19:10:14.611785+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T19:32:09.567945+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OLu8YCfwDQCpfNdQDBj69A=="
+							},
+							"code" : "conjugations := chat messages last contentJson at: 'List'.\rconjugationFile := 'present-conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T18:58:43.871215+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T18:58:57.10535+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wNyQNyfwDQCmNxreDBj69A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Assistant:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T19:10:40.753552+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T19:25:45.99536+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aKFLYifwDQCq3rMGDBj69A=="
+							},
+							"code" : "\rankiFile := 'present-conjugations.txt' asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab\n#html:false\r'.\r\t\tconjugations lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size );\r\t\t\t\t\tlf ] ].\rankiFile"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T19:11:03.308518+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T19:11:09.03872+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "M8SjYyfwDQCq5fbmDBj69A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Export to Anki:"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-04-27T19:39:00.755868+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-04-27T19:39:23.414915+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Get french verbs conjugations and transform to Anki"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "c0d541bf-26f0-0d00-bd3c-3d9b0ff9f313"
+	}
+}

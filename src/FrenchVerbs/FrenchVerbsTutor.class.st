@@ -5,6 +5,14 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+FrenchVerbsTutor >> createChatOn: aList [
+	| chat |
+	chat := self createChat.
+	chat onInstance: (self valueHolderFor: aList).
+	^ chat
+]
+
+{ #category : #'as yet unclassified' }
 FrenchVerbsTutor >> defaultDescription [
 	^ 'You are an assistant that is used to interactively work on blog posts.'
 ]
@@ -214,4 +222,12 @@ se lever,me lève,te lèves,se lève,nous levons,vous levez,se lèvent
 se préparer,me prépare,te prépares,se prépare,nous préparons,vous préparez,se préparent
 se présenter,me présente,te présentes,se présente,nous présentons,vous présentez,se présentent
 se réveiller,me réveille,te réveilles,se réveille,nous réveillons,vous réveillez,se réveillent'. 'Action' -> 'Present tense conjugation'. 'Text' -> nil } asDictionary}
+]
+
+{ #category : #'as yet unclassified' }
+FrenchVerbsTutor >> valueHolderFor: aList [ 
+	^ GtLlmSerializableValueHolder new
+		name: 'List';
+		content: aList;
+		serializer: [:list | String lf join: list ]
 ]
