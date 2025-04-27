@@ -37,9 +37,10 @@ FrenchVerbsTutor >> gtListFormatDescription [
 FrenchVerbsTutor >> gtPresentTenseConjugation [
  	<gtLlmTutorAction>
  	^ GtLlmTutorAction new
-	    name: 'Present tense conjugation';
+	    name: 'Conjugation';
 	    priority: 10;
-		description: 'Chat: Please produce the conjugation at present tense in French for the verbs. For each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun. Return the result in the `List` property.';
+	    format: 'Conjugation at {1}';
+		description: 'Please produce the conjugation at {1} tense in French for the verbs. For each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun. Return the result in the `List` property.';
 		examples: {GtLlmTutorActionExample new
 	input: { 'List' -> 'avoir
 être

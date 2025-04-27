@@ -386,14 +386,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T19:56:48.615231+02:00"
+									"dateAndTimeString" : "2025-04-27T20:07:57.696337+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "aKFLYifwDQCq3rMGDBj69A=="
 							},
-							"code" : "\rankiFile := 'anki-imparfait-conjugations.txt' asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab\n#html:false\r'.\r\t\tconjugations lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size );\r\t\t\t\t\tlf ] ].\rankiFile"
+							"code" : "ankiFile := 'anki-imparfait-conjugations.txt' asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab\n#html:false\r'.\r\t\tconjugations lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size );\r\t\t\t\t\tlf ] ].\rankiFile"
 						}
 					]
 				},
