@@ -216,7 +216,45 @@
 								"uidString" : "LMRgNifwDQClyq+sDBj69A=="
 							},
 							"code" : "chat sendChatRequest: 'Please produce the conjugation at present tense in French for the verbs. For each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun. Return the result in the `List` property.'."
-						},
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T18:58:43.871215+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T19:44:22.200322+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wNyQNyfwDQCmNxreDBj69A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Custom assistant:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "pharoSnippet",
 							"children" : {
@@ -242,14 +280,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T19:39:51.31729+02:00"
+									"dateAndTimeString" : "2025-04-27T19:54:18.081901+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "LUiWySfwDQC1lYGGDBj69A=="
 							},
-							"code" : "tutor := FrenchVerbsTutor new.\rchat := tutor createChat.\rchat onInstance: serializableText"
+							"code" : "tutor := FrenchVerbsTutor new.\rchat := tutor createChatOn: verbs."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -276,14 +314,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T19:32:09.567945+02:00"
+									"dateAndTimeString" : "2025-04-27T19:56:34.459621+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "OLu8YCfwDQCpfNdQDBj69A=="
 							},
-							"code" : "conjugations := chat messages last contentJson at: 'List'.\rconjugationFile := 'present-conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
+							"code" : "conjugations := chat messages last contentJson at: 'List'.\rconjugationFile := 'imparfait-conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
 						}
 					]
 				},
@@ -295,7 +333,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-27T18:58:43.871215+02:00"
+						"dateAndTimeString" : "2025-04-27T19:44:36.421785+02:00"
 					}
 				},
 				"editEmail" : {
@@ -306,17 +344,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-27T18:58:57.10535+02:00"
+						"dateAndTimeString" : "2025-04-27T19:44:47.531216+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wNyQNyfwDQCmNxreDBj69A=="
+					"uidString" : "h7j92ifwDQC2rKW3DBj69A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Assistant:"
+				"string" : "Dedicated assistant:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -348,14 +386,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T19:25:45.99536+02:00"
+									"dateAndTimeString" : "2025-04-27T20:07:57.696337+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "aKFLYifwDQCq3rMGDBj69A=="
 							},
-							"code" : "\rankiFile := 'present-conjugations.txt' asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab\n#html:false\r'.\r\t\tconjugations lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size );\r\t\t\t\t\tlf ] ].\rankiFile"
+							"code" : "ankiFile := 'anki-imparfait-conjugations.txt' asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab\n#html:false\r'.\r\t\tconjugations lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size );\r\t\t\t\t\tlf ] ].\rankiFile"
 						}
 					]
 				},
