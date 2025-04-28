@@ -24,6 +24,7 @@ BaselineOfPlayground >> baseline: spec [
 	<baseline>
 		^ spec for: #common do: [
 			spec package: 'Playground'.
-			spec package: 'Countries'
+			spec package: 'Countries'.
+			spec package: 'FrenchVerbs'
 		]
 ]

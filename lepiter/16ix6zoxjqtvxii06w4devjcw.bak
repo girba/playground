@@ -174,14 +174,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T18:58:42.463132+02:00"
+									"dateAndTimeString" : "2025-04-28T23:55:32.616459+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "wCBsNyfwDQCmJNjsDBj69A=="
 							},
-							"code" : "tutor := GtLlmTutor new\r\t\tdescription: 'You are an assistant that is used to interactively work on blog posts.'.\rtutor\r\taddFormat: (GtLlmTutorFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'List';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'List';\r\t\tcontent: verbs;\r\t\tserializer: [:list | String lf join: list ]"
+							"code" : "tutor := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that is used to interactively work on blog posts.'.\rtutor\r\taddFormat: (GtLlmAssistantFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'List';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'List';\r\t\tcontent: verbs;\r\t\tserializer: [:list | String lf join: list ]"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -314,14 +314,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T23:42:15.728117+02:00"
+									"dateAndTimeString" : "2025-04-28T23:57:04.192248+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "LUiWySfwDQC1lYGGDBj69A=="
 							},
-							"code" : "tutor := FrenchVerbsTutor new.\rchat := tutor createChatOn: verbs."
+							"code" : "tutor := FrenchVerbsAssistant new.\rchat := tutor createChatOn: verbs."
 						}
 					]
 				},

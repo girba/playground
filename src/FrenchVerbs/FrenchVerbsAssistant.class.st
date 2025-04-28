@@ -14,7 +14,7 @@ FrenchVerbsAssistant >> createChatOn: aList [
 
 { #category : #'as yet unclassified' }
 FrenchVerbsAssistant >> defaultDescription [
-	^ 'You are an assistant that is used to interactively work on blog posts.'
+	^ 'You are an assistant that is used to interactively work on French verbs.'
 ]
 
 { #category : #'as yet unclassified' }
@@ -24,8 +24,8 @@ FrenchVerbsAssistant >> defaultProviderStencil [
 
 { #category : #'as yet unclassified' }
 FrenchVerbsAssistant >> gtListFormatDescription [
-	<gtLlmTutorFormat>
-	^ GtLlmTutorFormatDescription new
+	<gtLlmAssistantFormat>
+	^ GtLlmAssistantFormatDescription new
 	type: 'string';
 	format: 'Text';
 	name: 'List';
@@ -35,8 +35,8 @@ FrenchVerbsAssistant >> gtListFormatDescription [
 
 { #category : #'as yet unclassified' }
 FrenchVerbsAssistant >> gtPresentTenseConjugation [
- 	<gtLlmTutorAction>
- 	^ GtLlmTutorAction new
+ 	<gtLlmAssistantAction>
+ 	^ GtLlmAssistantAction new
 	    name: 'Conjugation';
 	    priority: 10;
 	    format: 'Conjugation at {1}';
