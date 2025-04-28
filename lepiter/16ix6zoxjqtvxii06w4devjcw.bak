@@ -18,6 +18,40 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-28T16:53:17.724206+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-28T16:53:17.724206+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QlrQlDnwDQCITNKVBWFVbA=="
+				},
+				"code" : "string := 'avoir / être / adorer / acheter / admirer / aimer / aller / attendre/ battre / boire / chanter / commencer / connaître / construire / décider /descendre / détester / devoir / dire / donner / dormir / écrire/ entendre /enfermer /enregistrer / entrer / espérer / explorer / faire / frapper / gagner /goûter / habiter / hacher / inviter / jouer / laver / lire / manger / mélanger /mettre /monter / montrer / nettoyer / opérer / parler / passer / (ap)prendre /comprendre / surprendre / partir / penser / préférer / publier / pouvoir /raconter / regarder / rencontrer / rentrer / réparer / répondre / réserver / retourner / rêver / savoir / sentir / servir / sortir / sourire / tomber / toucher / traverser / trier / trouver / vendre / venir / vivre / voir / vouloir s’amuser / s’appeler / s’énerver / s’habiller / se coucher / se dépêcher / se doucher / se laver / se lever / se préparer / se présenter / se réveiller'."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2025-04-27T18:25:05.425047+02:00"
 					}
 				},
@@ -29,14 +63,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-27T18:41:16.198444+02:00"
+						"dateAndTimeString" : "2025-04-28T16:53:17.736129+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "u9ZBvybwDQC9PbPfD/nzEw=="
 				},
-				"code" : "string := 'avoir / être / adorer / acheter / admirer / aimer / aller / attendre/ battre / boire / chanter / commencer / connaître / construire / décider /descendre / détester / devoir / dire / donner / dormir / écrire/ entendre /enfermer /enregistrer / entrer / espérer / explorer / faire / frapper / gagner /goûter / habiter / hacher / inviter / jouer / laver / lire / manger / mélanger /mettre /monter / montrer / nettoyer / opérer / parler / passer / (ap)prendre /comprendre / surprendre / partir / penser / préférer / publier / pouvoir /raconter / regarder / rencontrer / rentrer / réparer / répondre / réserver / retourner / rêver / savoir / sentir / servir / sortir / sourire / tomber / toucher / traverser / trier / trouver / vendre / venir / vivre / voir / vouloir s’amuser / s’appeler / s’énerver / s’habiller / se coucher / se dépêcher / se doucher / se laver / se lever / se préparer / se présenter / se réveiller'.\rverbs := (string piecesCutWhere: [:a :b | b = $/]) collect:[ :s | (s trim removePrefix: '/') trim]."
+				"code" : "verbs := (string piecesCutWhere: [:a :b | b = $/]) collect:[ :s | (s trim removePrefix: '/') trim]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -280,7 +314,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T19:54:18.081901+02:00"
+									"dateAndTimeString" : "2025-04-27T23:42:15.728117+02:00"
 								}
 							},
 							"uid" : {
@@ -288,40 +322,6 @@
 								"uidString" : "LUiWySfwDQC1lYGGDBj69A=="
 							},
 							"code" : "tutor := FrenchVerbsTutor new.\rchat := tutor createChatOn: verbs."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T19:10:14.611785+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T19:56:34.459621+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "OLu8YCfwDQCpfNdQDBj69A=="
-							},
-							"code" : "conjugations := chat messages last contentJson at: 'List'.\rconjugationFile := 'imparfait-conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
 						}
 					]
 				},
@@ -375,6 +375,78 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T19:10:14.611785+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-27T23:43:06.956692+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OLu8YCfwDQCpfNdQDBj69A=="
+							},
+							"code" : "conjugations := chat messages last contentJson at: 'List'.\rconjugationFile := 'conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T23:42:39.045594+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-27T23:42:40.721842+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nXF9LivwDQCiIMA7DBj69A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Save to file:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2025-04-27T19:10:40.753552+02:00"
 								}
 							},
@@ -386,14 +458,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T20:07:57.696337+02:00"
+									"dateAndTimeString" : "2025-04-27T23:48:50.842101+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "aKFLYifwDQCq3rMGDBj69A=="
 							},
-							"code" : "ankiFile := 'anki-imparfait-conjugations.txt' asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab\n#html:false\r'.\r\t\tconjugations lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size );\r\t\t\t\t\tlf ] ].\rankiFile"
+							"code" : "ankiFile := 'anki-conjugations.txt' asFileReference ensureDelete.\rankiFile writeStreamDo: [ :s | \r\ts nextPutAll: '#separator:tab'; lf; nextPutAll: \n'#html:false'; lf.\r\tconjugations lines do: [ :each | \r\t\ts   nextPutAll: (each copyUpToSubstring: ',');\r\t\t\tnextPutAll: ' = [...]'; tab;\r\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\tnextPutAll: ' = ';\r\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size ); lf ] ].\rankiFile"
 						}
 					]
 				},
@@ -416,7 +488,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-27T19:11:09.03872+02:00"
+						"dateAndTimeString" : "2025-04-27T23:42:54.285621+02:00"
 					}
 				},
 				"uid" : {
@@ -426,7 +498,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Export to Anki:"
+				"string" : "Translate to Anki file format:"
 			}
 		]
 	},
