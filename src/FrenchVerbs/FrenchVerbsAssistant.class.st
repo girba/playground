@@ -28,7 +28,7 @@ FrenchVerbsAssistant >> gtListFormatDescription [
 	^ GtLlmAssistantFormatDescription new
 	type: 'string';
 	format: 'Text';
-	name: 'List';
+	name: 'Verbs';
 	priority: 10;
 	example: nil
 ]
@@ -46,7 +46,7 @@ FrenchVerbsAssistant >> gtPresentTenseConjugation [
 { #category : #'as yet unclassified' }
 FrenchVerbsAssistant >> valueHolderFor: aList [ 
 	^ GtLlmSerializableValueHolder new
-		name: 'List';
+		name: 'Verbs';
 		content: aList;
 		serializer: [:list | String lf join: list ]
 ]
