@@ -23,6 +23,26 @@ FrenchVerbsAssistant >> defaultProviderStencil [
 ]
 
 { #category : #'as yet unclassified' }
+FrenchVerbsAssistant >> gtConjugationOnlyAtFirstPersonSingular [
+ 	<gtLlmAssistantAction>
+ 	^ GtLlmAssistantAction new
+	    name: 'Conjugation first person singular';
+	    priority: 10;
+	    format: 'Conjugation first person singular at {1}';
+		description: 'Please produce the conjugation at {1} tense in French for the verbs. The list should be comma separated, where each row has two values: the verb at infinitiv, and the conjugation at first person singular including the pronoun. A row should not contain any other information outside of the verb at the infinitive and the conjugation. Return the result in the `Verbs` property.'
+]
+
+{ #category : #'as yet unclassified' }
+FrenchVerbsAssistant >> gtConjugationWithAllForms [
+ 	<gtLlmAssistantAction>
+ 	^ GtLlmAssistantAction new
+	    name: 'Conjugation with all forms';
+	    priority: 10;
+	    format: 'Conjugation with all forms at {1}';
+		description: 'Please produce the conjugation at {1} tense in French for the verbs. For each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun. Return the result in the `List` property.'
+]
+
+{ #category : #'as yet unclassified' }
 FrenchVerbsAssistant >> gtListFormatDescription [
 	<gtLlmAssistantFormat>
 	^ GtLlmAssistantFormatDescription new
@@ -31,16 +51,6 @@ FrenchVerbsAssistant >> gtListFormatDescription [
 	name: 'Verbs';
 	priority: 10;
 	example: nil
-]
-
-{ #category : #'as yet unclassified' }
-FrenchVerbsAssistant >> gtPresentTenseConjugation [
- 	<gtLlmAssistantAction>
- 	^ GtLlmAssistantAction new
-	    name: 'Conjugation';
-	    priority: 10;
-	    format: 'Conjugation at {1}';
-		description: 'Please produce the conjugation at {1} tense in French for the verbs. For each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun. Return the result in the `List` property.'
 ]
 
 { #category : #'as yet unclassified' }

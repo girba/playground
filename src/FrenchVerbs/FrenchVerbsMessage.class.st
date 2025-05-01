@@ -16,8 +16,8 @@ FrenchVerbsMessage >> gtListFor: aView [
 FrenchVerbsMessage >> gtListTrimmedFor: aView [
 	<gtLlmMessageView>
 	^ aView list
-		title: 'List';
+		title: 'Verbs';
 		items: [ | list lines |
-			list := self contentJson at: 'List'.
+			list := self contentJson at: 'Verbs'.
 			lines := list lines size > 7ifTrue: [ (list lines first: 7), {'...'} ]  ]
 ]

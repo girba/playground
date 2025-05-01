@@ -174,14 +174,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-28T23:59:07.433697+02:00"
+									"dateAndTimeString" : "2025-04-29T00:03:19.216455+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "wCBsNyfwDQCmJNjsDBj69A=="
 							},
-							"code" : "tutor := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that is used to interactively work on French verbs.'.\rtutor\r\taddFormat: (GtLlmAssistantFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'List';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'List';\r\t\tcontent: verbs;\r\t\tserializer: [:list | String lf join: list ]"
+							"code" : "tutor := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that is used to interactively work on French verbs.'.\rtutor\r\taddFormat: (GtLlmAssistantFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'Verbs';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'Verbs';\r\t\tcontent: verbs;\r\t\tserializer: [:list | String lf join: list ]"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -386,14 +386,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T23:43:06.956692+02:00"
+									"dateAndTimeString" : "2025-04-30T21:54:18.720063+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "OLu8YCfwDQCpfNdQDBj69A=="
 							},
-							"code" : "conjugations := chat messages last contentJson at: 'List'.\rconjugationFile := 'conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
+							"code" : "conjugations := chat messages last contentJson at: 'Verbs'.\rconjugationFile := 'conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
 						}
 					]
 				},
@@ -458,14 +458,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T23:48:50.842101+02:00"
+									"dateAndTimeString" : "2025-04-30T22:14:36.020298+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "aKFLYifwDQCq3rMGDBj69A=="
 							},
-							"code" : "ankiFile := 'anki-conjugations.txt' asFileReference ensureDelete.\rankiFile writeStreamDo: [ :s | \r\ts nextPutAll: '#separator:tab'; lf; nextPutAll: \n'#html:false'; lf.\r\tconjugations lines do: [ :each | \r\t\ts   nextPutAll: (each copyUpToSubstring: ',');\r\t\t\tnextPutAll: ' = [...]'; tab;\r\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\tnextPutAll: ' = ';\r\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size ); lf ] ].\rankiFile"
+							"code" : "ankiFile := 'anki-conjugations.txt' asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab';\r\t\t\tlf;\r\t\t\tnextPutAll: '#html:false';\r\t\t\tlf.\r\t\tconjugations lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' (passe compose) = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each copyUpToSubstring: ',');\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size);\r\t\t\t\t\tlf ] ].\rankiFile"
 						}
 					]
 				},
