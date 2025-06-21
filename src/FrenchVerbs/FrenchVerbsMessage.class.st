@@ -30,11 +30,21 @@ FrenchVerbsMessage >> asAnkiFormattedString [
 { #category : #views }
 FrenchVerbsMessage >> gtAnkiFormatFor: aView [
 	<gtView>
+	<gtLlmMessageView>
 	self isAssistantRole ifFalse: [ ^ aView empty ].
 	^ aView textEditor
 		title: 'Anki format';
 		aptitude: BrGlamorousCodeEditorAptitude;
-		text: [ self asAnkiFormattedString ]
+		text: [ self asAnkiFormattedString ];
+		actionButtonLabel: 'Export'
+			tooltip: 'Export as a text file'
+			action: [ :aButton |
+				| file |
+				file := FileLocator temp / 'anki-export.txt'.
+				file writeStreamDo: [ :str | str nextPutAll: self asAnkiFormattedString ].
+				aButton phlow spawnObject: file
+			]
+
 ]
 
 { #category : #views }
