@@ -63,7 +63,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T16:53:17.736129+02:00"
+						"dateAndTimeString" : "2025-06-21T16:12:27.328488+02:00"
 					}
 				},
 				"uid" : {
@@ -102,14 +102,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T18:58:31.545093+02:00"
+									"dateAndTimeString" : "2025-06-21T16:17:41.455463+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "b2hlxSbwDQCBY1nSD/nzEw=="
 							},
-							"code" : "chat := GtLlmChat new provider: (GtOpenAIResponseProvider withApiKeyFromFile model: 'o3-mini').\rchat sendMessage: 'Please produce the conjugation at present tense in French for the following verbs: ```text', String lf, (String lf join: verbs), String lf, '```\rFor each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun.'"
+							"code" : "chat := GtLlmChat new provider: (GtOpenAIResponseProvider withApiKeyFromFile model: '4.1').\rchat sendMessage: 'Please produce the conjugation at present tense in French for the following verbs: ```text', String lf, (String lf join: verbs), String lf, '```\rFor each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun.'"
 						}
 					]
 				},
@@ -174,14 +174,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-29T00:03:19.216455+02:00"
+									"dateAndTimeString" : "2025-06-21T16:37:42.392039+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "wCBsNyfwDQCmJNjsDBj69A=="
 							},
-							"code" : "tutor := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that is used to interactively work on French verbs.'.\rtutor\r\taddFormat: (GtLlmAssistantFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'Verbs';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'Verbs';\r\t\tcontent: verbs;\r\t\tserializer: [:list | String lf join: list ]"
+							"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that is used to interactively work on French verbs.'.\rassistant\r\taddFormat: (GtLlmAssistantFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'Verbs';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'Verbs';\r\t\tcontent: verbs;\r\t\tserializer: [:list | String lf join: list ]"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -208,14 +208,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T18:56:10.394858+02:00"
+									"dateAndTimeString" : "2025-06-21T16:37:43.920552+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "GTtDLifwDQClHOEkDBj69A=="
 							},
-							"code" : "chat := tutor createChat.\rchat onInstance: serializableText"
+							"code" : "assistantChat := assistant createChat.\rassistantChat onInstance: serializableText"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -242,14 +242,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-27T19:00:58.154674+02:00"
+									"dateAndTimeString" : "2025-06-21T16:43:31.018871+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "LMRgNifwDQClyq+sDBj69A=="
 							},
-							"code" : "chat sendChatRequest: 'Please produce the conjugation at present tense in French for the verbs. For each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun. Return the result in the `List` property.'."
+							"code" : "assistantChat sendChatRequest: 'Please produce the conjugation at present tense in French for the verbs. For each verb list the conjugation and format the result in a plain text list comma separated list that also includes the initial verb on the first position. The row should not contain any other information outside of the verb at the infinitive and the conjugations. Do not include the pronoun. Return the result in the `Verbs` property.'."
 						}
 					]
 				},
@@ -314,14 +314,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-28T23:57:04.192248+02:00"
+									"dateAndTimeString" : "2025-06-21T17:01:22.976357+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "LUiWySfwDQC1lYGGDBj69A=="
 							},
-							"code" : "tutor := FrenchVerbsAssistant new.\rchat := tutor createChatOn: verbs."
+							"code" : "dedicatedAssistant := FrenchVerbsAssistant new.\rdedicatedChat := dedicatedAssistant createChatOn: verbs."
 						}
 					]
 				},
@@ -386,14 +386,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-30T21:54:18.720063+02:00"
+									"dateAndTimeString" : "2025-06-21T17:01:22.981506+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "OLu8YCfwDQCpfNdQDBj69A=="
 							},
-							"code" : "conjugations := chat messages last contentJson at: 'Verbs'.\rconjugationFile := 'conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
+							"code" : "conjugations := dedicatedChat messages last contentJson at: 'Verbs'.\rconjugationFile := 'conjugations.txt' asFileReference ensureDelete writeStreamDo: [:s | s nextPutAll: conjugations ]; yourself"
 						}
 					]
 				},
