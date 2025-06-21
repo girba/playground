@@ -18,11 +18,6 @@ FrenchVerbsAssistant >> defaultDescription [
 ]
 
 { #category : #'as yet unclassified' }
-FrenchVerbsAssistant >> defaultProviderStencil [
-	^ [:aValue | (super defaultProviderStencil value: aValue) assistantMessageClass: FrenchVerbsMessage; userMessageClass: FrenchVerbsMessage ]
-]
-
-{ #category : #'as yet unclassified' }
 FrenchVerbsAssistant >> gtConjugationOnlyAtFirstPersonSingular [
  	<gtLlmAssistantAction>
  	^ GtLlmAssistantAction new
@@ -51,6 +46,15 @@ FrenchVerbsAssistant >> gtListFormatDescription [
 	name: 'Verbs';
 	priority: 10;
 	example: nil
+]
+
+{ #category : #'as yet unclassified' }
+FrenchVerbsAssistant >> treatProvider: aProvider [
+	super treatProvider: aProvider.
+	
+	aProvider
+		assistantMessageClass: FrenchVerbsMessage;
+		userMessageClass: FrenchVerbsMessage
 ]
 
 { #category : #'as yet unclassified' }

@@ -4,6 +4,39 @@ Class {
 	#category : #FrenchVerbs
 }
 
+{ #category : #accessing }
+FrenchVerbsMessage >> asAnkiFormattedString [
+	| conjugations |
+	conjugations := self contentJson at: 'Verbs'.
+	^ String
+		streamContents: [ :s | 
+			s
+				nextPutAll: '#separator:tab';
+				lf;
+				nextPutAll: '#html:false';
+				lf.
+			conjugations lines
+				do: [ :each | 
+					s
+						nextPutAll: (each copyUpToSubstring: ',');
+						nextPutAll: ' (' , self arguments first , ') = [...]';
+						tab;
+						nextPutAll: (each copyUpToSubstring: ',');
+						nextPutAll: ' = ';
+						nextPutAll: (each copyFrom: (each copyUpToSubstring: ',') size + 2 to: each size);
+						lf ] ]
+]
+
+{ #category : #views }
+FrenchVerbsMessage >> gtAnkiFormatFor: aView [
+	<gtView>
+	self isAssistantRole ifFalse: [ ^ aView empty ].
+	^ aView textEditor
+		title: 'Anki format';
+		aptitude: BrGlamorousCodeEditorAptitude;
+		text: [ self asAnkiFormattedString ]
+]
+
 { #category : #views }
 FrenchVerbsMessage >> gtListFor: aView [
 	<gtView>
