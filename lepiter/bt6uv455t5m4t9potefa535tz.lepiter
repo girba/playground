@@ -55,6 +55,40 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T20:27:58.739229+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T20:27:59.463158+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Rywtck3+DQCZiUCpA8VKYQ=="
+				},
+				"code" : "titleKey := 'chemie-1'.\rcsvFile := '/Users/girba/Private/Lucas/Chemie-1.csv' asFileReference.\rcsv := CSVParser parse: csvFile contents."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2025-10-23T22:29:12.659745+02:00"
 					}
 				},
@@ -66,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-23T22:38:17.222543+02:00"
+						"dateAndTimeString" : "2025-10-24T20:28:48.877633+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "QQflBTv+DQC6Yu+pA9h/xw=="
 				},
-				"code" : "titleKey := 'french-german'.\rcsvFile := 'cuvinte-franceza-oct2025-lerebeermatt-pages-177-.csv' asFileReference.\rcsv := CSVParser parse: csvFile contents.\rankiFile := 'cuvinte-franceza-oct2025-lerebeermatt-pages-177-s.txt' asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab';\r\t\t\tlf;\r\t\t\tnextPutAll: '#html:false';\r\t\t\tlf.\r\t\tcsv lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each values first value);\r\t\t\t\t\tnextPutAll: ' (', titleKey,') = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each values first value);\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each values second value);\r\t\t\t\t\tlf ] ].\rankiFile"
+				"code" : "ankiFile := (csvFile basenameWithoutExtension, '.txt') asFileReference ensureDelete.\rankiFile\r\twriteStreamDo: [ :s | \r\t\ts\r\t\t\tnextPutAll: '#separator:tab';\r\t\t\tlf;\r\t\t\tnextPutAll: '#html:false';\r\t\t\tlf.\r\t\tcsv lines\r\t\t\tdo: [ :each | \r\t\t\t\ts\r\t\t\t\t\tnextPutAll: (each values first value);\r\t\t\t\t\tnextPutAll: ' (', titleKey,') = [...]';\r\t\t\t\t\ttab;\r\t\t\t\t\tnextPutAll: (each values first value);\r\t\t\t\t\tnextPutAll: ' = ';\r\t\t\t\t\tnextPutAll: (each values second value);\r\t\t\t\t\tlf ] ].\rankiFile"
 			}
 		]
 	},
