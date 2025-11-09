@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T20:27:59.463158+02:00"
+						"dateAndTimeString" : "2025-11-09T16:06:08.094983+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Rywtck3+DQCZiUCpA8VKYQ=="
 				},
-				"code" : "titleKey := 'chemie-1'.\rcsvFile := '/Users/girba/Private/Lucas/Chemie-1.csv' asFileReference.\rcsv := CSVParser parse: csvFile contents."
+				"code" : "csvFile := 'path/to/file.csv' asFileReference.\rtitleKey := csvFile basenameWithoutExtension.\rcsv := CSVParser parse: csvFile contents."
 			},
 			{
 				"__type" : "pharoSnippet",
