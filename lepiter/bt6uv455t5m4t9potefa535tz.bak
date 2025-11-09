@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-09T16:05:52.756954+01:00"
+						"dateAndTimeString" : "2025-11-09T16:20:36.280896+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Rywtck3+DQCZiUCpA8VKYQ=="
 				},
-				"code" : "csvFile := 'AFi.csv' asFileReference.\rtitleKey := csvFile basenameWithoutExtension.\rcsv := CSVParser parse: csvFile contents."
+				"code" : "csvFile := '/Users/girba/Library/Mobile Documents/com~apple~CloudDocs/Lucas/9th grade/rechtschreibung-reguli-zeichensetzung.csv' asFileReference.\rtitleKey := csvFile basenameWithoutExtension.\rcsv := CSVParser parse: csvFile contents."
 			},
 			{
 				"__type" : "pharoSnippet",
